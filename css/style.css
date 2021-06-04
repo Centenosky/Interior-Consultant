@@ -1,11 +1,21 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
   background-color: #181719;
   color: #FFFFFF;
 }
 
 .container {
   max-width: 1280px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -19,9 +29,9 @@ header {
 .title span {
   font-family: 'Crimson Pro', serif, ui-system;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 1.4rem;
   border: 1px solid #FFFFFF;
-  padding: 8px;
+  padding: .8rem;
   text-transform: uppercase;
 }
 
@@ -32,7 +42,7 @@ header {
 
 .menu a {
   font-family: 'Montserrat', sans-serif, ui-system;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
   text-decoration: none;
   color: #FFFFFF;
@@ -81,15 +91,15 @@ main {
 .description-title {
   font-family: 'Lora', serif, ui-system;
   font-weight: 500;
-  font-size: 48px;
-  margin: 40px 0;
+  font-size: 4.8rem;
+  margin: 4rem 0;
 }
 
 .description-details {
   font-family: 'Montserrat', sans-serif, ui-system;
   font-weight: 400;
-  font-size: 24px;
-  margin: 0 0 40px;
+  font-size: 2.4rem;
+  margin: 0 0 4rem;
 }
 
 .container-button {
@@ -99,7 +109,7 @@ main {
 .description-more {
   font-family: 'Montserrat', sans-serif, ui-system;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #FFFFFF;
   text-decoration: none;
   position: relative;
@@ -127,7 +137,7 @@ main {
 }
 
 .image-right {
-  margin: 1em 20px;
+  margin: 1rem 2rem;
 }
 
 .image-right img {
@@ -151,7 +161,7 @@ main {
 }
 
 .person-image {
-  margin: 1em 20px 1em 0;
+  margin: 1rem 2rem 1rem 0;
 }
 
 .person-image img {
@@ -167,21 +177,21 @@ main {
 .person-name {
   font-family: 'Montserrat', sans-serif, ui-system;
   font-weight: 500;
-  font-size: 14px;
-  margin: 0 0 .5em;
+  font-size: 1.4rem;
+  margin: 0 0 .7rem;
 }
 
 .person-job {
   font-family: 'Montserrat', sans-serif, ui-system;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #828282;
 }
 
 .card-text {
   font-family: 'Lora', serif, ui-system;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 footer {
@@ -193,7 +203,7 @@ footer {
   font-weight: 500;
   font-size: 14px;
   color: #A9A9A9;
-  margin-top: 210px;
+  margin-top: 21rem;
 }
 
 footer a {
@@ -202,4 +212,63 @@ footer a {
   font-size: 14px;
   color: #A9A9A9;
   text-decoration: none;
+}
+
+@media (max-width: 1080px) {
+  .menu li {
+    margin-left: 60px;
+  }
+  .description-title {
+    font-size: 4.2rem;
+  }
+  .description-details {
+    font-size: 2rem;
+  }
+  .image-right {
+    margin: 1rem 0 1rem 3rem;
+  }
+  .card-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .description {
+    margin-bottom: 5rem;
+  }
+  .description-title {
+    margin: 3.5rem 0 3rem;
+  }
+  .description-details {
+    max-width: 60%;
+  }
+  .image-right {
+    margin: 0;
+  }
+  .card {
+    transform: translate(-50%, 50%);
+  }
+  footer {
+    margin-top: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  .description-title {
+    margin: 3.5rem 0 2.5rem;
+    font-size: 4rem;
+  }
+  .description-details {
+    font-size: 1.8rem;
+  }
+  .description-more {
+    font-size: 1.6rem;
+  }
 }
